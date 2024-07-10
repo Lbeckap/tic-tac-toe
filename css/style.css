@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+  font-family: cursive;
+}
+
+body {
+  background-color: rgb(6, 6, 6);
+  background-image: url("../images/chalkboard.jpg");
+  background-size: cover;
+  display: grid;
+  grid-template-rows: 15% 85%;
+  grid-template-columns: 85% 15%;
+  grid-template-areas:
+    "header header"
+    "gameArea sidebar";
+  height: 100vh;
+  margin: 0;
+  color: white;
+}
+
+#header {
+  text-align: center;
+}
+
+#game-area {
+  grid-area: gameArea;
+  display: grid;
+  max-width: 90%;
+  margin: 0px 5% 5% 10%;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+#sidebar {
+  grid-area: sidebar;
+  text-align: center;
+}
+
+#top-left,
+#top-center,
+#top-right,
+#center-left,
+#center-center,
+#center-right {
+  border-bottom: #3154ff 5px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#top-left,
+#top-center,
+#center-left,
+#center-center,
+#bottom-left,
+#bottom-center {
+  border-right: #2846da 5px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#bottom-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.new-game-btn {
+  background: linear-gradient(rgb(3, 239, 54),rgb(1, 79, 1));
+  color: white;
+  width: 80%;
+  margin-bottom: 20px;
+  padding: 3px;
+}
+
+.forfeit-game-btn {
+  background: linear-gradient(rgb(251, 4, 4),rgb(139, 0, 0));
+  color: white;
+  width: 80%;
+  padding: 3px;
+}
